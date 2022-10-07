@@ -48,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9C231028EF805600654D53 /* Story Boards */ = {
+			isa = PBXGroup;
+			children = (
+				2DB096E928EDE0E100A868B5 /* Main.storyboard */,
+				2DB096EE28EDE0E200A868B5 /* LaunchScreen.storyboard */,
+			);
+			path = "Story Boards";
+			sourceTree = "<group>";
+		};
 		2DB096D728EDE0E000A868B5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +78,11 @@
 		2DB096E228EDE0E100A868B5 /* SB-HW-2.10-Networking-API-JSON */ = {
 			isa = PBXGroup;
 			children = (
-				2DB096E328EDE0E100A868B5 /* AppDelegate.swift */,
-				2DB096E528EDE0E100A868B5 /* SceneDelegate.swift */,
+				2DE9A9A828EF865A007CC75F /* Supports */,
 				2DB096FD28EE2F7100A868B5 /* ViewControllers */,
 				2DB096FB28EE2F5800A868B5 /* View */,
 				2DB096FC28EE2F6500A868B5 /* Model */,
-				2DB096E928EDE0E100A868B5 /* Main.storyboard */,
-				2DB096EC28EDE0E200A868B5 /* Assets.xcassets */,
-				2DB096EE28EDE0E200A868B5 /* LaunchScreen.storyboard */,
+				2D9C231028EF805600654D53 /* Story Boards */,
 				2DB096F128EDE0E200A868B5 /* Info.plist */,
 			);
 			path = "SB-HW-2.10-Networking-API-JSON";
@@ -107,13 +113,22 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		2DE9A9A828EF865A007CC75F /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				2DB096E328EDE0E100A868B5 /* AppDelegate.swift */,
+				2DB096E528EDE0E100A868B5 /* SceneDelegate.swift */,
+				2DB096EC28EDE0E200A868B5 /* Assets.xcassets */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
 		304B17C188833F613CAA6E36 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B02D6A79741F2946D85C6DF4 /* Pods-SB-HW-2.10-Networking-API-JSON.debug.xcconfig */,
 				14A8F87993F11D09A308E483 /* Pods-SB-HW-2.10-Networking-API-JSON.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

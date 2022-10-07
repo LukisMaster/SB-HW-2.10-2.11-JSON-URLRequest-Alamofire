@@ -79,15 +79,16 @@
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="3cJ-sj-Rno"/>
-                                                <constraint firstAttribute="width" constant="150" id="tm4-0b-Q1N"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="rYt-EN-m9F" firstAttribute="width" secondItem="bvH-cI-L98" secondAttribute="width" id="BGp-hd-K01"/>
                                     <constraint firstItem="e6D-ib-cmx" firstAttribute="top" secondItem="bvH-cI-L98" secondAttribute="top" id="JmT-lc-Nh6"/>
                                     <constraint firstItem="e6D-ib-cmx" firstAttribute="leading" secondItem="bvH-cI-L98" secondAttribute="leading" id="cQq-D4-GhS"/>
                                     <constraint firstAttribute="bottom" secondItem="rYt-EN-m9F" secondAttribute="bottom" id="eCX-1Y-4Fh"/>
