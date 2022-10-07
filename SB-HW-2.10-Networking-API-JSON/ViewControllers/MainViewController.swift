@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UICollectionViewController {
     
@@ -13,7 +14,8 @@ class MainViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchFromSite()
+        //fetchFromSite()           //SB-HW-2.10
+        fetchFromSiteAlomofire()    //SB-HW-2.11
     }
     // MARK: UICollectionViewDataSource
 
@@ -69,7 +71,7 @@ class MainViewController: UICollectionViewController {
 }
 
 
- // MARK: Networking - API - JSON
+ // MARK: Networking URLSession SB-HW-2.10
 extension MainViewController {
     private func fetchFromSite() {
         guard let url = URL(string: ToolCartonData.url) else {
@@ -95,3 +97,26 @@ extension MainViewController {
     }
 }
 
+// MARK: Networking Alomofire SB-HW-2.11
+extension MainViewController {
+    private func fetchFromSiteAlomofire() {
+        let request = AF.request(ToolCartonData.url).validate()
+        request.responseJSON {response in
+            debugPrint(response.result)
+            switch response.result {
+            case .success(let data):
+                print(data)
+                self.somePeople = ToolCartonData.getToolCartons(from: data)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            case .failure( let error):
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.failedAlert()
+                }
+            }
+        }
+    }
+    
+}

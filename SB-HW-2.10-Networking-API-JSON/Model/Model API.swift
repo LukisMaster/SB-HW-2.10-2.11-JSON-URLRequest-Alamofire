@@ -14,8 +14,25 @@ struct ToolCartonData : Decodable {
     var designation : String
     var avatar : String?
     var message : String
-    var rating : Float
+    var rating : Double
     var audio : String
+    
+    init(dictionaryData: [String: Any]){
+        id = dictionaryData["id"] as! Int
+        name = dictionaryData["name"] as! String
+        location = dictionaryData["location"] as! String
+        designation = dictionaryData["designation"] as! String
+        avatar = dictionaryData["avatar"] as? String
+        message = dictionaryData["message"] as! String
+        rating = dictionaryData["rating"] as! Double
+        audio = dictionaryData["audio"] as! String
+    }
+    
+    static func getToolCartons(from value: Any) -> [ToolCartonData] {
+        print(value)
+        guard let toolCartonsData = value as? [[String: Any]] else { return [] }
+        return toolCartonsData.compactMap { ToolCartonData(dictionaryData: $0) }
+    }
     
     func getInfo () -> [String] {
         var info : [String] = []
